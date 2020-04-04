@@ -38,7 +38,7 @@ export default class CreateComments extends Component {
             description: this.state.description
         }
 
-        axios.post('/comments/add/', comment)
+        axios.post('/api/comments/add/', comment)
         .then(res => console.log(res.data));
         
     }
