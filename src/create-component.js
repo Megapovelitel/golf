@@ -40,7 +40,7 @@ export default class CreateComments extends Component {
 
         axios.post('/comments/add/', comment)
         .then(res => console.log(res.data));
-        
+        window.location = 'https://golf-application.herokuapp.com/comments';
     }
 
     render() {
