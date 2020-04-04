@@ -23,8 +23,8 @@ const port = process.env.PORT || 5000;
 
 
 
-const uri = process.env.MONGODB_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true}
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true}
     );
     const connection = mongoose.connection;
     connection.once('open', () => {
