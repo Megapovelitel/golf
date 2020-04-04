@@ -3,7 +3,7 @@ let Comment = require('../models/comment.model');
 
 router.route('/').get((req, res) => {
     Comment.find()
-    .then(comments => res.json(comments))
+    .then(comments => console.log(comments))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
