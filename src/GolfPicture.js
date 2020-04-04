@@ -19,7 +19,7 @@ constructor(props){
 }
 
 componentDidMount() {
-    axios.get(`http://localhost:5000/golfseries/${this.props.match.params.id}`)
+    axios.get(`/golfseries/${this.props.match.params.id}`)
     .then (response => {
       this.setState({isLoading: false, exactGolf : response.data.image})
       console.log(this.state.exactGolf); 

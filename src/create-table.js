@@ -55,7 +55,7 @@ export default class CreateTable extends Component {
             image: this.state.image
         }
 
-        axios.post('http://localhost:5000/golfseries/add', golf)
+        axios.post('/golfseries/add', golf)
         .then(res => console.log(res.data));
         window.location = '/golfseries';
     }

@@ -21,7 +21,7 @@ export default class GolfSeries extends Component {
       }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/golfseries/')
+        axios.get('/golfseries/')
         .then (response => {
           this.setState({isLoading: false, golfs: response.data})
           console.log(this.state.golfs); 
