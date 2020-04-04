@@ -21,8 +21,8 @@ const port = process.env.PORT || 5000;
 
 
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true}
+
+mongoose.connect('mongodb+srv://mongo:mongo@cluster0-84gn6.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true}
     );
     const connection = mongoose.connection;
     connection.once('open', () => {
