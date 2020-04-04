@@ -41,6 +41,7 @@ export default class Comments extends Component {
     })
     .catch((error) => {
       console.log(error);
+      console.log(this.comments);
     })
   }
  
