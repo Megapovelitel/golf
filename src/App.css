@@ -1,38 +1,726 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,800,800i,900,900i&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  overflow-y: scroll;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-size: 35px;
+  background-color: rgb(37, 182, 207);
+  color: rgb(0, 0, 0);
+  
+ 
+}
+nav, ul, li, a {
+  text-decoration: none;
+}
+
+.nav-links {
+  
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: 500;
+  color: black !important;
+  
+  
+}
+
+  .link,
+    .active {
+        color: rgb(0, 0, 0);
+        position: relative;
+        font-weight: 700;
+        
+        z-index: 5;
+       
+      
+    }
+    .link::before,
+    .active::before{
+        content:'';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        background-color:rgba(251, 253, 255, 0.863);
+        width: 100%;
+        height: 2px;
+        transform-origin: center;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 1000ms;
+        
+    }
+    
+    .active::before{
+        transform: scaleX(1);
+    }
+
+    .link:hover::before{
+        transform: scaleX(1);
+    }
+
+.logo{
+  transform: scale(0.8);
+  margin-top: 5px;
+  
+  
+}
+.link{
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: rgb(250, 244, 244);
+  text-shadow: 2px 2px 1px rgb(125, 150, 173);
+}
+
+
+.main{
+  width: 100%;
+  height: 80vh;
+  background: 
+  linear-gradient(140deg,rgba(9, 50, 66, 0.938) 10%,rgba(4, 34, 59, 0.514) 90%),
+  url('images/golf2.png') 0px -240px no-repeat;
+  
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.main::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 150px;
+  background: url('images/wave-large.png') center no-repeat;
+  background-size: cover;
+  z-index: 5;
+  
+}
+
+.name {
+  font-family: 'Lato', sans-serif;
+  
+  
+  font-size: 65px;
+  color: rgb(14, 166, 204);
+  
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+  
+}
+/*
+.active {
+  color: black !important;
+  outline-offset: 5px;
+  outline: 2px solid rgb(73, 156, 224);
+} */
+
+
+
+.best{
+  color: rgb(243, 242, 242);
+  font-family: 'Lato', sans-serif;
+  text-shadow: 2px 2px 1px black;
+  margin-top: 35px;
+  
+
+}
+
+.name, .best { 
+  margin-left: 55px;
+  
+}
+
+.div {
+  height: 500px;
+  width: 500px;
+  outline: 6px black solid;
+}
+
+
+.super{
+  height: auto;
+  
+  background-color: rgba(19, 81, 163, 0);
+  display: flex;
+  font-family: 'Muli', sans-serif;
+  font-size: 11px;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin-left: 125px;
+  border-left: rgb(13, 114, 230) 5px solid;
+  border-bottom: rgb(13, 114, 230) 1px solid;
+  
+  
+  border-radius: 10px;
+  outline-offset: 15px;
+  vertical-align: center;
+  justify-content: baseline;
+  margin-bottom: 15px;
+
+  
+  
+}
+
+
+.megadiv{
+  width: fit-content;
+  height: auto;
+  display: flex;
+  margin-left: 50px;
+  padding-top: 45px;
+  flex-wrap: wrap;
+  
+  flex-direction: column-reverse !important;
+  
+  
+}
+
+
+.hello {
+  color: rgb(37, 182, 207);
+  margin-top: 5px;
+  margin-left: 15px;
+  font-size: 25px;
+  text-shadow: -1px -1px 0 rgb(10, 5, 37), 1px -1px 0 rgb(7, 11, 34), -1px 1px 0 rgb(14, 7, 34), 1px 1px 0 rgb(12, 18, 46);
+}
+
+.comment{
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+
+.car{
+  background: 
+  linear-gradient(115deg,rgba(3, 29, 39, 0.925) 60%,rgba(9, 78, 134, 0.945) 100%),
+  url('images/golf4.png') center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: auto;
+  height: auto;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.loader-container {
+  display: flex;
+  width: auto;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+.txt{
+  padding-left: 25px;
+  margin-left: 25px;
+}
+
+
+
+.button{
+  
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  position: absolute;
+  align-self: flex-end;
+  width: 15px;
+  height: 15px;
+  transform: translateX(-25px);
+}
+
+.button {
+	box-shadow:inset 0px 1px 0px 0px #7887b8;
+	background:linear-gradient(to bottom, #1673ec 5%, #255cd1 100%);
+	background-color:#2d99d8;
+	border-radius:2px;
+	border:1px solid #2269c5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:10px;
+  margin-left: 25px;
+	text-decoration: none;
+	text-shadow:0px 1px 0px #854629;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #cf8f83 5%, #d0451b 100%);
+	background-color:#cf8f83;
+}
+
+.form{
+  display:flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex: 1;
+  margin-top: 50px;
+ 
+}
+.form input {
+  width: 60%;
+  font-size: 25px;
+   background-color: transparent;
+   border: 3px black solid;
+   outline: none;
+   color: white;
+   text-shadow: 2px 2px 1px black;
+   margin-bottom: 15px;
+   opacity: 0.8;
+   transition: 1.5s ease;
+   animation-fill-mode: forwards;
+   text-align: center;
+}
+
+.form input::placeholder{
   color: white;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 22px;
+}
+.form input:hover{
+  opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.qwe{
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  padding-top: 25px;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(37, 182, 207);
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.date{
+  text-shadow: 2px 2px 1px black;
+  margin-top: 10px;
+  font-size: 15px;
 }
+
+.submit{
+  color: rgb(234, 236, 243);
+  width: 100px !important;
+  height: 45px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 2px solid rgb(23, 128, 226) !important;
+  background-color: rgba(26, 95, 199, 0.521) !important;
+  outline: none;
+  font-size: 18px !important;
+  background-image: url('./images/fire.png');
+  transition: 1s ease-in-out;
+  box-shadow: 2px 2px 3px black;
+  opacity: 0.3 !important;
+}
+
+.submit:hover{
+  
+  border: 4px solid rgb(40, 132, 236);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.014) 12%, rgba(0,212,255,1) 47%, rgba(9, 9, 121, 0.219) 85%);
+  opacity: 1 !important;
+}
+
+.submit:active {
+	position:relative;
+	top:1px;
+}
+
+
+.username {
+  border: 2px solid rgb(33, 116, 241) !important;
+  border-radius: 2px;
+}
+
+.space{
+  height: 25px;
+  width: 100%;
+  display: flex;
+  
+  justify-content: center;
+  background-color: rgb(19, 127, 214);
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+  
+}
+
+.active {
+  transform: translateY(-2px);
+}
+
+
+.title-heading {
+  margin-top: 100px;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.image-new {
+  height: 500px;
+  width: auto;
+  outline: 5px solid rgb(37, 182, 207);
+}
+
+.imagecontainer{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.title-heading h1{
+  font-size: 35px;
+  color: rgb(37, 182, 207);
+  font-weight: 700;
+  text-shadow: -1px -1px 0 rgb(40, 42, 44), 1px -1px 0 rgb(37, 182, 207), -1px 1px 0 rgb(37, 182, 207), 1px 1px 0 rgb(37, 182, 207);
+}
+
+.title-heading p{
+ color: rgb(37, 182, 207) !important;
+ font-weight: 700 !important;
+ font-size: 20px !important;
+}
+
+.title-heading h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: rgb(254, 254, 255);
+  text-shadow: -1.5px -1.5px 0 rgb(37, 182, 207), 1.5px -1.5px 0 rgb(37, 182, 207), -1.5px 1.5px 0 rgb(37, 182, 207), 1.5px 1.5px 0 rgb(37, 182, 207);
+}
+
+.golf-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+  grid-gap: 35px;
+  
+   justify-content: center;
+   
+   
+}
+
+.golf-grid-item {
+  
+  height: 350px;
+    padding: 25px;
+    color: #fcebd2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px rgb(21, 156, 235) !important;
+    cursor: pointer;
+    z-index: 1;
+    border-bottom: 2px solid rgb(21, 156, 235);
+    text-align: center;
+    background-position: no-repeat;
+    border-radius: 1px;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+    
+    
+}
+.golf-grid-item:hover::before{
+   
+    background: cover;
+    background-image:linear-gradient(180deg,rgba(10, 58, 77, 0.507) 25%,rgba(74, 159, 223, 0.322) 90%);
+    
+}
+
+.golf-grid-item:hover{
+  color: black;
+  
+  text-shadow: -1px -1px 0 rgb(37, 182, 207), 1px -1px 0 rgb(37, 182, 207), -1px 1px 0 rgb(37, 182, 207), 1px 1px 0 rgb(37, 182, 207) !important;
+ 
+  
+  
+  
+  
+}
+.golf-grid-item::before{
+  content:'';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:linear-gradient(180deg,rgba(5, 32, 43, 0.89) 25%,rgba(21, 61, 92, 0.733) 90%);
+  z-index: -1;
+
+}
+
+.golf5 {
+  background: url('images/golf5.jpg')center no-repeat;
+  background-size: contain;
+  
+}
+
+.golf6 {
+  background: url('images/golf6.jpg') -300px no-repeat;
+  width: auto;
+  
+}
+
+.golf7 {
+  background: url('images/golf7.jpg') 0px center  no-repeat;
+  background-size: contain;
+}
+
+.container{
+  width: 100%;
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  
+}
+
+.golfos{
+  padding: 0;
+  overflow-x: hidden
+  
+}
+
+.golf-grid-item h1{
+  font-size: 25px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-family: 'Muli', sans-serif;
+    
+    
+    
+}
+
+.golf-grid-item p{
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+}
+
+.title-heading p{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-family: 'Muli', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+
+.formm {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.golfseriescar {
+  background: 
+  linear-gradient(115deg,rgba(3, 29, 39, 0.925) 60%,rgba(9, 78, 134, 0.945) 100%),
+  url('images/vwgolf.png') center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: auto;
+  height: auto;
+  min-height: 100vh;
+  
+}
+
+
+
+
+.created {
+  margin-top: 200px;
+  width: 100%;
+  height: 110vh;
+  background: 
+  linear-gradient(140deg,rgba(9, 50, 66, 0.808) 10%,rgba(4, 34, 59, 0.692) 90%),
+  url('./images/golf.png') center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.created::before{
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background:url('images/wave-large-reversed.png') center no-repeat;
+  background-size: cover;
+}
+
+.createdby{
+  width: 150px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 15px;
+  display: flex;
+  text-align: center;
+  flex-basis: 50%;
+  align-items: center;
+  flex-direction: column;
+}
+.text-creator{
+padding: 0 15px;
+margin-top: 25px;
+margin-bottom: 10px;
+position: relative;
+color: rgb(46, 197, 243);
+width: 500px;
+font-size: 45px;
+z-index: 5;
+font-family: 'Lato', sans-serif;
+text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+}
+
+
+
+.creator{
+  height: 150px;
+  width: 200px;
+  background-image: url('./images/gleb.png');
+ 
+  background-size: contain;
+  border: 1px solid #2c6388d5;
+  box-shadow: 2px 2px 2px rgb(36, 161, 233);
+  
+  
+}
+
+.creator-img h1{
+  color: rgb(36, 161, 233) !important;
+  font-size: 30px;
+  padding-top: 15px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.mail{
+  
+  display: flex;
+  
+  justify-content: center;
+  
+  padding-top: 50px;
+  margin-bottom: -50px;
+  
+  
+}
+
+.mailform{
+  
+  width: 500px;
+  
+  height: 300px;
+  background-color: rgba(12, 57, 65, 0.719);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  font-family: 'Lato', sans-serif;
+ 
+  border-radius: 5px;
+  color: white;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 2px solid rgb(68, 137, 235);
+}
+
+
+
+
+.mailform h1{
+  color: white;
+  text-shadow: 2px 2px 2px rgb(9, 20, 49);
+  background: rgba(31, 51, 94, 0.432);
+  letter-spacing: 2px;
+  padding-top: 25px;
+  vertical-align: middle;
+}
+
+.mailform input::placeholder, textarea::placeholder{
+  color: white;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.mailform input{
+  font-size: 16px;
+}
+
+.mailform textarea{
+  font-size: 16px;
+  resize: none; 
+  
+}
+.inputEmail, .inputSubject, .inputMessage {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(68, 137, 235);
+  color: rgb(68,137,235);
+  width: 70%;
+  
+}
+
+.error{
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(219, 34, 43);
+  color: rgb(68,137,235);
+  width: 70%;
+}
+
+.mailbutton{
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 40px;
+  border-radius: 2px;
+  width: 215px;
+  align-self: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s linear;
+}
+
+.mailbutton:hover{
+  background: rgba(53, 153, 235, 0.849);
+}
+
+
+.errorMessage{
+  color: rgb(207, 82, 82);
+}
+
+
