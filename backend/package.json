@@ -2,13 +2,17 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "12.16.1",
+    "npm" : "6.13.4"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "prod": "NODE_ENV=production node server.js",
     "deploy": "cd client && npm run build && cp -a ./build/ ../public/",
-    "heroku-postbuid" : "cross-env NODE_ENV=production WEBPACK_CONFIG=browser_prod,server_prod webpack --colors"
+    "heroku-postbuild": "ng build --prod" 
   },
   "keywords": [],
   "author": "",
