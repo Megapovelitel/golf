@@ -47,7 +47,7 @@ export default class Comments extends Component {
  
   deleteComment(id) {
     
-    axios.delete('api/comments/'+id)
+    axios.delete('/api/comments/'+id)
     .then(res => console.log(res.data));
     this.setState({
       comments: this.state.comments.filter(el => el._id !== id)
