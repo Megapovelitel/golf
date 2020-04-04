@@ -35,9 +35,9 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true}
     const golfseriesRouter = require('./routes/golfseries');
     const mailRouter = require('./routes/mail');
     
-    app.use('/api/comments', commentsRouter);
-    app.use('/api/golfseries', golfseriesRouter);
-    app.use('/api/gallery', mailRouter);
+    app.use('/comments', commentsRouter);
+    app.use('/golfseries', golfseriesRouter);
+    app.use('/gallery', mailRouter);
 
 
 
