@@ -9,7 +9,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js",
+    "start": "node server.js",
     "prod": "NODE_ENV=production node server.js",
     "deploy": "cd client && npm run build && cp -a ./build/ ../public/",
     "heroku-postbuild": "ng build --prod" 
