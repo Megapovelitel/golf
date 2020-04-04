@@ -41,6 +41,6 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true}
 
   
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', function()  {
     console.log(`Serer is running on port: ${port}`);
 });
