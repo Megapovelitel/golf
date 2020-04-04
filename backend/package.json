@@ -12,7 +12,9 @@
     "start": "node server.js",
     "prod": "NODE_ENV=production node server.js",
     "deploy": "npm run build && cp -a ./build/ ../public/",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "build --prod",
+    "dev": "react-scripts start",
+  "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
