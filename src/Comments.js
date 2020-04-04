@@ -34,7 +34,7 @@ export default class Comments extends Component {
   }
 
    componentDidMount() {
-     axios.get('/comments')
+     axios.get('/comments-backend')
     .then (response => {
       this.setState({ isLoading: false, comments: response.data })
       console.log(this.state.comments)
@@ -47,7 +47,7 @@ export default class Comments extends Component {
  
   deleteComment(id) {
     
-    axios.delete('/comments/'+id)
+    axios.delete('/comments-backend/'+id)
     .then(res => console.log(res.data));
     this.setState({
       comments: this.state.comments.filter(el => el._id !== id)
