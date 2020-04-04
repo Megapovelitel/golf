@@ -1,9 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const publicPath = path.join(__dirname, '..', 'public');
+const path = require('path');
 
 require('dotenv').config();
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+ });
 
 const app = express();
 const port = process.env.PORT || 5000;
