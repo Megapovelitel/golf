@@ -29,9 +29,9 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true}
         console.log('MongoDB database connection established successfully');
     })
 
-    const commentsRouter = require ('./routes/comments');
-    const golfseriesRouter = require('./routes/golfseries');
-    const mailRouter = require('./routes/mail');
+    const commentsRouter = require ('./backend/routes/comments');
+    const golfseriesRouter = require('./backend/routes/golfseries');
+    const mailRouter = require('./backend/routes/mail');
     
     app.use('/comments', commentsRouter);
     app.use('/golfseries', golfseriesRouter);
