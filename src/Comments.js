@@ -33,8 +33,8 @@ export default class Comments extends Component {
       comments: []};
   }
 
-  async componentDidMount() {
-    await axios.get('/comments/')
+   componentDidMount() {
+     axios.get('/comments/')
     .then (response => {
       this.setState({ isLoading: false, comments: response.data })
       console.log(this.state.comments)
