@@ -94,7 +94,7 @@ nav, ul, li, a {
   height: 80vh;
   background: 
   linear-gradient(140deg,rgba(9, 50, 66, 0.938) 10%,rgba(4, 34, 59, 0.514) 90%),
-  url('images/golf2.png') 0px -240px no-repeat;
+  url('images/golf2.png') 0 -240px no-repeat;
   
   background-size: cover;
   position: relative;
@@ -103,6 +103,8 @@ nav, ul, li, a {
   flex-direction: column;
   
 }
+
+
 
 .main::before{
   content: '';
@@ -221,7 +223,7 @@ nav, ul, li, a {
   height: auto;
   min-height: 95vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .loader-container {
@@ -310,6 +312,10 @@ nav, ul, li, a {
   font-size: 30px;
   font-weight: 900;
   color: rgb(37, 182, 207);
+  
+  
+  align-self: center;
+  
   
 }
 
@@ -545,7 +551,30 @@ nav, ul, li, a {
 }
 
 
+.videocar {
+  background: 
+  linear-gradient(115deg,rgba(3, 29, 39, 0.925) 60%,rgba(9, 78, 134, 0.945) 100%),
+  url('images/golfvideo.png') center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: auto;
+  height: auto;
+  min-height: 88.5vh;
+  
+}
 
+
+.video {
+  align-self: center;
+  
+  border: 5px solid rgb(37, 182, 207);
+}
+
+.video2{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 
 .created {
   margin-top: 200px;

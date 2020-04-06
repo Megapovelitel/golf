@@ -24,13 +24,13 @@ export default function About() {
         </div> 
         <section className='golfos'>
                 <div className='container'>
-                    <div className='title-heading' data-aos='fade-up'>
+                    <div className='title-heading' data-aos='fade-up' data-aos-offset='300'>
                     <h3>Дамы и господа...</h3>
                 <h1>VOLKSWAGEN GOLF</h1>
                 <p>Сайт создан, чтобы нести в массы культуру автомобиля VW Golf!</p>
                     </div>
 
-                 <div className='golf-grid' data-aos='fade-right'>
+                 <div className='golf-grid' data-aos='fade-right' data-aos-offset='150'>
                      <div className='golf-grid-item golf5' >
                      <h1>Комфорт</h1>
                     <p>Удобство за приемлемые деньги</p>

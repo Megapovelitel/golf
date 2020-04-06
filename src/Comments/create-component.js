@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './App.css'
+import '../App.css'
 import axios from 'axios';
 
 export default class CreateComments extends Component {
@@ -38,9 +38,9 @@ export default class CreateComments extends Component {
             description: this.state.description
         }
 
-        axios.post('/api/comments/add/', comment)
+        axios.post('http://localhost:5000/comments/add/', comment)
         .then(res => console.log(res.data));
-        
+        window.location = 'http://localhost:3000/comments/';
     }
 
     render() {

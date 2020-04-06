@@ -19,7 +19,7 @@ function Nav() {
                 <NavLink to='/comments'>
                 <li  className='link link2'>Комментарии</li>
                 </NavLink>
-                <NavLink to='/gallery'>
+                <NavLink to='/video'>
                 <li  className='link link3'>Галерея</li>
                 </NavLink>
                 <NavLink to='/golfseries'>

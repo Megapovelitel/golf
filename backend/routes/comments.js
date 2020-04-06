@@ -3,8 +3,8 @@ let Comment = require('../models/comment.model');
 
 router.route('/').get((req, res) => {
     Comment.find()
-    .then(comments => res.json(comments),
-    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private'))
+    .then(comments => res.json(comments))
+    
     .catch(err => res.status(400).json('Error: ' + err));
 });
 

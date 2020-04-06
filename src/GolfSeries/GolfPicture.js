@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import './App.css'
+import '../App.css'
 import {Link} from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Loader from './Loader/Loader'
+import Loader from '../Loader/Loader'
 
 class GolfPicture extends Component{
 constructor(props){
@@ -19,7 +19,7 @@ constructor(props){
 }
 
 componentDidMount() {
-    axios.get(`/golfseries/${this.props.match.params.id}`)
+    axios.get(`http://localhost:5000/golfseries/${this.props.match.params.id}`)
     .then (response => {
       this.setState({isLoading: false, exactGolf : response.data.image})
       console.log(this.state.exactGolf); 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import './App.css'
-import Loader from './Loader/Loader'
-import Table from './Table/Table'
+import '../App.css'
+import Loader from '../Loader/Loader'
+import Table from '../Table/Table'
 
 
 
@@ -21,7 +21,7 @@ export default class GolfSeries extends Component {
       }
 
     componentDidMount() {
-        axios.get('/golfseries/')
+        axios.get('http://localhost:5000/golfseries/')
         .then (response => {
           this.setState({isLoading: false, golfs: response.data})
           console.log(this.state.golfs); 

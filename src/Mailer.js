@@ -43,7 +43,7 @@ export default class Mailer extends Component {
             alert("В форме есть пустые строки");
           }
         else if (formValid(this.state.formErrors)) {
-            await fetch('/gallery/contact', {
+            await fetch('http://localhost:5000/gallery/contact/', {
             method: 'POST',
             headers: {
                 'Content-type' : 'application/json'

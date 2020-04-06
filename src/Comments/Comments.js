@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import './App.css'
+import '../App.css'
 import axios from 'axios'
 import CreateComments from './create-component'
-import Loader from './Loader/Loader'
+import Loader from '../Loader/Loader'
 
 const Comment = props => (
     <div>
@@ -34,7 +34,7 @@ export default class Comments extends Component {
   }
 
    componentDidMount() {
-     axios.get('/api/comments')
+     axios.get('http://localhost:5000/comments/')
     .then (response => {
       this.setState({ isLoading: false, comments: response.data })
       console.log(this.state.comments)
@@ -47,7 +47,7 @@ export default class Comments extends Component {
  
   deleteComment(id) {
     
-    axios.delete('/api/comments/'+id)
+    axios.delete('http://localhost:5000/comments/'+id)
     .then(res => console.log(res.data));
     this.setState({
       comments: this.state.comments.filter(el => el._id !== id)
@@ -71,24 +71,25 @@ export default class Comments extends Component {
           {this.state.isLoading ? <div className='car'><Loader/></div> : 
           <div className='loader-container'>
          <div className='car'>
-           
-      
-   <div className='space'>
-        
-        <p>&copy; 2020 Megachel. Все права защищены. </p>
-      </div>
+            
+      <h3 className='qwe'>Оставьте комментарий проекту, регистрация не требуется</h3>
+      {this.commentList( ) }
+  
          <CreateComments /> 
-            {this.commentList( ) }
+            
+             
             
             
-            
-            <h3 className='qwe'>Оставьте комментарий проекту, регистрация не требуется</h3>
-            
+            </div> 
+           
        </div>
 
 
-        </div>
-        }
+       
+        }<div className='space'>
+        
+        <p>&copy; 2020 Megachel. Все права защищены. </p>
+      </div>
             </React.Fragment>
             
      )

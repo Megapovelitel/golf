@@ -11,12 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.resolve(__dirname, '..','build')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..','build', 'index.html'));
-  
-});
 
 
 const port = process.env.PORT || 5000;
@@ -35,7 +30,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true}
     const golfseriesRouter = require('./routes/golfseries');
     const mailRouter = require('./routes/mail');
     
-    app.use('/api/comments', commentsRouter);
+    app.use('/comments', commentsRouter);
     app.use('/golfseries', golfseriesRouter);
     app.use('/gallery', mailRouter);
 
